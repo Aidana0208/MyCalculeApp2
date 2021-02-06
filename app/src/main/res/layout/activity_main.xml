@@ -14,89 +14,75 @@
         android:ems="5"
         android:hint="num1"
         android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="100dp" />
+         />
 
     <EditText
         android:id="@+id/num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="65dp"
         android:ems="5"
         android:hint="num2"
         android:inputType="number"
-        app:layout_constraintLeft_toRightOf="@+id/num1"
+        app:layout_constraintTop_toBottomOf="@+id/num1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="100dp" />
+         />
 
     <Button
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:onClick="add"
         android:text="+"
         android:textSize="32dp"
         app:layout_constraintTop_toBottomOf="@id/num1"
+        app:layout_constraintRight_toLeftOf="@id/num2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp"
         android:background="@drawable/oval_button"/>
 
     <Button
         android:id="@+id/sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="50dp"
         android:onClick="sub"
         android:text="-"
         android:textSize="32dp"
         app:layout_constraintTop_toBottomOf="@id/add"
-        android:background="@drawable/oval_button"
+        app:layout_constraintRight_toLeftOf="@id/num2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp" />
+        android:background="@drawable/oval_button"/>
 
     <Button
         android:id="@+id/mul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:onClick="mul"
         android:text="*"
         android:textSize="32dp"
-        app:layout_constraintTop_toBottomOf="@id/num2"
+        app:layout_constraintLeft_toRightOf="@id/num2"
+        app:layout_constraintTop_toTopOf="@+id/add"
         tools:ignore="MissingConstraints"
-        app:layout_constraintLeft_toRightOf="@id/sub"
-        android:background="@drawable/oval_button"
-        />
+        android:background="@drawable/oval_button"/>
 
     <Button
         android:id="@+id/div"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="50dp"
         android:onClick="div"
         android:text="/"
         android:textSize="32dp"
         app:layout_constraintTop_toBottomOf="@id/mul"
-        app:layout_constraintLeft_toRightOf="@id/sub"
+        app:layout_constraintLeft_toLeftOf="@+id/mul"
         tools:ignore="MissingConstraints"
-        android:background="@drawable/oval_button"
-        />
-
-    <Button
-        android:id="@+id/ress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:onClick="ress"
-        android:text="="
-        android:textSize="32dp"
-        app:layout_constraintTop_toBottomOf="@id/div"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="200dp"
-        android:background="@drawable/oval_button"
-        />
+        android:background="@drawable/oval_button"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
