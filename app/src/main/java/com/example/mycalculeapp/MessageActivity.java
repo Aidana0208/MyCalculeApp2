@@ -18,7 +18,7 @@ public class MessageActivity extends AppCompatActivity {
         // Получаем объект Intent, который запустил данную activity
         Intent intent = getIntent();
         // Получаем сообщение из объекта intent
-        String message = intent.getStringExtra("message");
+        double message = intent.getDoubleExtra("mess",1  );
         // Получаем TextView по его id
         TextView messageText = (TextView) findViewById(R.id.messageText);
         // устанавливаем текст для TextView
